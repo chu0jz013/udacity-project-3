@@ -9,7 +9,7 @@ phases:
     commands:
       - echo Starting build at `date`
       - echo Building the Docker image...          
-      - docker build -t docker build -t coworking-space-service-ecr .
+      - docker build -t coworking-space-service-ecr .
       - docker tag $IMAGE_REPO_NAME:$IMAGE_TAG $AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com/coworking-space-service-ecr:latest  
   post_build:
     commands:
