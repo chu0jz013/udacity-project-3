@@ -1,0 +1,1 @@
+aws ecr get-login-password --region us-east-1 --profile udacity | docker login --username AWS --password-stdin 601668098225.dkr.ecr.us-east-1.amazonaws.com
