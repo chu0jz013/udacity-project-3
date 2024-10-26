@@ -3,6 +3,9 @@ env:
   variables:
     IMAGE_REPO_NAME: coworking-space-service-ecr
     IMAGE_TAG: latest
+    AWS_ACCOUNT_ID: 184801666906
+    AWS_DEFAULT_REGION: us-east-1
+
 
 phases:
   pre_build:
