@@ -15,7 +15,7 @@ spec:
         service: coworking
     spec:
       containers:
-        - image: 601668098225.dkr.ecr.us-east-1.amazonaws.com/coworking-space-service-ecr
+        - image: 184801666906.dkr.ecr.us-east-1.amazonaws.com/coworking-space-service-ecr
           name: coworking
           imagePullPolicy: Always
           ports:

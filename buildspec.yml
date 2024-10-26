@@ -1,4 +1,8 @@
 version: 0.2
+env:
+  variables:
+    IMAGE_REPO_NAME: coworking-space-service-ecr
+    IMAGE_TAG: latest
 
 phases:
   pre_build:
@@ -8,9 +12,9 @@ phases:
   build:
     commands:
       - echo Starting build at `date`
-      - echo Building the Docker image...          
+      - echo Building the Docker image...
       - docker build -t $IMAGE_REPO_NAME:$IMAGE_TAG ./analytics
-      - docker tag $IMAGE_REPO_NAME:$IMAGE_TAG $AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com/$IMAGE_REPO_NAME:$IMAGE_TAG      
+      - docker tag $IMAGE_REPO_NAME:$IMAGE_TAG $AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com/$IMAGE_REPO_NAME:$IMAGE_TAG
   post_build:
     commands:
       - echo Completed build at `date`
